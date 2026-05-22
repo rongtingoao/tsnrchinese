@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SNR 中文社群 · 馬來西亞</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #080c18; color: #e2e8f0; min-height: 100vh; }
+
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: rgba(8,12,24,0.97); border-bottom: 1px solid rgba(0,200,160,0.15); position: sticky; top: 0; z-index: 10; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-badge { width: 38px; height: 38px; border-radius: 8px; background: rgba(0,200,160,0.15); border: 1px solid rgba(0,200,160,0.4); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: #00c8a0; letter-spacing: 1px; }
+    .logo-text { font-size: 16px; font-weight: 500; color: #fff; }
+    .logo-text span { color: #00c8a0; }
+    .nav-links { display: flex; gap: 20px; align-items: center; }
+    .nav-links a { font-size: 13px; color: #64748b; text-decoration: none; cursor: pointer; transition: color .2s; }
+    .nav-links a:hover { color: #00c8a0; }
+    .nav-social { display: flex; gap: 8px; align-items: center; }
+    .nav-discord { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; padding: 7px 14px; background: rgba(88,101,242,0.15); border: 1px solid rgba(88,101,242,0.4); border-radius: 6px; color: #818cf8; text-decoration: none; transition: all .2s; }
+    .nav-discord:hover { background: rgba(88,101,242,0.25); }
+    .nav-ig { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; padding: 7px 14px; background: rgba(225,48,108,0.12); border: 1px solid rgba(225,48,108,0.35); border-radius: 6px; color: #f472b6; text-decoration: none; transition: all .2s; }
+    .nav-ig:hover { background: rgba(225,48,108,0.22); }
+
+    .hero { padding: 72px 40px 56px; text-align: center; background: radial-gradient(ellipse at 50% -10%, rgba(0,200,160,0.1) 0%, transparent 60%); border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .hero-flag { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 2px; color: #00c8a0; border: 1px solid rgba(0,200,160,0.3); padding: 5px 16px; border-radius: 20px; background: rgba(0,200,160,0.06); margin-bottom: 28px; }
+    .hero h1 { font-size: 44px; font-weight: 500; line-height: 1.25; color: #fff; margin-bottom: 16px; }
+    .hero h1 em { font-style: normal; color: #00c8a0; }
+    .hero-sub { font-size: 17px; color: #00c8a0; font-weight: 500; margin-bottom: 10px; }
+    .hero p { font-size: 16px; color: #64748b; max-width: 540px; margin: 0 auto 36px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-discord-hero { display: flex; align-items: center; gap: 8px; padding: 13px 28px; font-size: 15px; font-weight: 500; background: #5865f2; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all .2s; text-decoration: none; }
+    .btn-discord-hero:hover { background: #4752c4; transform: translateY(-1px); }
+    .btn-ig-hero { display: flex; align-items: center; gap: 8px; padding: 13px 28px; font-size: 15px; font-weight: 500; background: transparent; color: #f472b6; border: 1px solid rgba(225,48,108,0.4); border-radius: 8px; cursor: pointer; transition: all .2s; text-decoration: none; }
+    .btn-ig-hero:hover { background: rgba(225,48,108,0.1); transform: translateY(-1px); }
+
+    .team-section { padding: 48px 40px; background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .team-inner { max-width: 1000px; margin: 0 auto; }
+    .team-title { font-size: 11px; letter-spacing: 2px; color: #334155; text-align: center; margin-bottom: 28px; text-transform: uppercase; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+    .team-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 14px; }
+    .team-card.lead { border-color: rgba(0,200,160,0.25); }
+    .team-card.asst { border-color: rgba(124,58,237,0.2); }
+    .team-card.official { border-color: rgba(0,200,160,0.35); background: rgba(0,200,160,0.04); }
+    .t-av { width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; }
+    .av-lead { background: rgba(0,200,160,0.15); border: 1px solid rgba(0,200,160,0.4); color: #00c8a0; }
+    .av-asst { background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.35); color: #a78bfa; }
+    .av-official { background: rgba(0,200,160,0.15); border: 1px solid rgba(0,200,160,0.4); color: #00c8a0; font-size: 11px; }
+    .t-info-name { font-size: 15px; font-weight: 500; color: #f1f5f9; }
+    .t-info-role { font-size: 12px; color: #475569; margin-top: 3px; }
+    .t-ig-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: #f472b6; text-decoration: none; margin-top: 6px; opacity: 0.8; }
+    .t-ig-link:hover { opacity: 1; }
+    .t-info-lang { display: inline-block; font-size: 10px; letter-spacing: 1px; padding: 2px 8px; border-radius: 4px; margin-top: 6px; }
+    .lang-asst { background: rgba(124,58,237,0.1); color: #a78bfa; border: 1px solid rgba(124,58,237,0.2); }
+
+    .stats { display: flex; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.04); flex-wrap: wrap; }
+    .stat-item { padding: 24px 40px; text-align: center; border-right: 1px solid rgba(255,255,255,0.05); flex: 1; min-width: 130px; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 26px; font-weight: 500; color: #00c8a0; }
+    .stat-label { font-size: 12px; color: #334155; margin-top: 4px; }
+
+    section { padding: 60px 40px; max-width: 1100px; margin: 0 auto; }
+    .sec-tag { font-size: 11px; letter-spacing: 2px; color: #00c8a0; text-transform: uppercase; margin-bottom: 10px; }
+    .sec-h2 { font-size: 28px; font-weight: 500; color: #fff; margin-bottom: 36px; }
+
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+    .plan-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 28px; position: relative; overflow: hidden; transition: all .25s; }
+    .plan-card:hover { transform: translateY(-4px); }
+    .plan-card.free { border-color: rgba(0,200,160,0.25); }
+    .plan-card.free:hover { border-color: rgba(0,200,160,0.5); }
+    .plan-card.group { border-color: rgba(124,58,237,0.25); }
+    .plan-card.group:hover { border-color: rgba(124,58,237,0.5); }
+    .plan-card.vip { border-color: rgba(234,179,8,0.25); }
+    .plan-card.vip:hover { border-color: rgba(234,179,8,0.45); }
+    .plan-badge { position: absolute; top: 0; right: 0; font-size: 10px; letter-spacing: 1px; font-weight: 500; padding: 5px 14px; border-bottom-left-radius: 10px; }
+    .badge-free { background: rgba(0,200,160,0.15); color: #00c8a0; }
+    .badge-pop { background: rgba(124,58,237,0.2); color: #a78bfa; }
+    .badge-vip { background: rgba(234,179,8,0.15); color: #fbbf24; }
+    .plan-name { font-size: 19px; font-weight: 500; color: #f1f5f9; margin-bottom: 6px; }
+    .plan-price { font-size: 28px; font-weight: 500; margin-bottom: 4px; }
+    .price-free { color: #00c8a0; }
+    .price-group { color: #a78bfa; }
+    .price-vip { color: #fbbf24; }
+    .plan-tutor { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #475569; margin-bottom: 14px; }
+    .plan-desc { font-size: 13px; color: #475569; margin-bottom: 20px; line-height: 1.6; }
+    .plan-features { list-style: none; margin-bottom: 24px; }
+    .plan-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #94a3b8; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .plan-features li:last-child { border-bottom: none; }
+    .ck-g { color: #00c8a0; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .ck-p { color: #a78bfa; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .ck-y { color: #fbbf24; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .plan-btn { width: 100%; padding: 11px; font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all .2s; border: none; display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; }
+    .btn-free-plan { background: rgba(88,101,242,0.15); color: #818cf8; border: 1px solid rgba(88,101,242,0.35); }
+    .btn-free-plan:hover { background: rgba(88,101,242,0.28); }
+    .btn-group { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.35); }
+    .btn-group:hover { background: rgba(124,58,237,0.28); }
+    .btn-vip { background: rgba(234,179,8,0.12); color: #fbbf24; border: 1px solid rgba(234,179,8,0.3); }
+    .btn-vip:hover { background: rgba(234,179,8,0.22); }
+
+    .features-wrap { background: rgba(255,255,255,0.015); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); padding: 60px 40px; }
+    .features-inner { max-width: 1100px; margin: 0 auto; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .feat-card { padding: 24px; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); }
+    .feat-num { font-size: 32px; font-weight: 500; color: rgba(0,200,160,0.2); margin-bottom: 10px; line-height: 1; }
+    .feat-card h4 { font-size: 15px; font-weight: 500; color: #e2e8f0; margin-bottom: 8px; }
+    .feat-card p { font-size: 13px; color: #475569; line-height: 1.7; }
+
+    .cta-section { text-align: center; padding: 72px 40px; background: radial-gradient(ellipse at 50% 100%, rgba(0,200,160,0.08) 0%, transparent 55%); border-top: 1px solid rgba(255,255,255,0.04); }
+    .cta-section h2 { font-size: 30px; font-weight: 500; color: #fff; margin-bottom: 12px; }
+    .cta-section p { font-size: 15px; color: #475569; margin-bottom: 32px; }
+    .cta-tag { display: inline-block; font-size: 13px; color: #00c8a0; background: rgba(0,200,160,0.08); border: 1px solid rgba(0,200,160,0.25); padding: 6px 18px; border-radius: 20px; margin-bottom: 24px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    footer { padding: 28px 40px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 12px; background: rgba(0,0,0,0.3); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { color: #334155; }
+    .footer-social { display: flex; gap: 8px; flex-wrap: wrap; }
+    .footer-link { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 6px 12px; border-radius: 6px; text-decoration: none; transition: all .2s; }
+    .footer-discord { color: #818cf8; border: 1px solid rgba(88,101,242,0.25); background: rgba(88,101,242,0.08); }
+    .footer-discord:hover { background: rgba(88,101,242,0.18); }
+    .footer-ig { color: #f472b6; border: 1px solid rgba(225,48,108,0.25); background: rgba(225,48,108,0.08); }
+    .footer-ig:hover { background: rgba(225,48,108,0.18); }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; flex-wrap: wrap; gap: 12px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px 40px; }
+      .hero h1 { font-size: 28px; }
+      section { padding: 40px 20px; }
+      .stat-item { padding: 18px 20px; }
+      .team-section, .features-wrap, .cta-section { padding: 40px 20px; }
+      footer { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <div class="logo-badge">SNR</div>
+      <div class="logo-text"><span>SNR</span> 中文社群</div>
+    </div>
+    <div class="nav-links">
+      <a href="#free">免費社群</a>
+      <a href="#plans">課程方案</a>
+      <a href="#team">導師團隊</a>
+    </div>
+    <div class="nav-social">
+      <a class="nav-discord" href="https://discord.gg/dFpFCEq5K" target="_blank">
+        <i class="ti ti-brand-discord"></i> Discord
+      </a>
+      <a class="nav-ig" href="https://www.instagram.com/tsnr.trade/" target="_blank">
+        <i class="ti ti-brand-instagram"></i> 官方 IG
+      </a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-flag">🇲🇾 馬來西亞 SNR · 全中文教學</div>
+    <h1>免費社群，<em>全中文帶領</em><br>超越市場的交易教育</h1>
+    <p class="hero-sub">免費社群 · 免費教學 · 助教全程中文帶領</p>
+    <p>由助教 Young 與 Ronting 以全中文主導所有課程，導師 Ariff T 親自做單分享——不花一分錢，即可獲得超越市面上 90% 收費課程的知識。</p>
+    <div class="hero-btns">
+      <a class="btn-discord-hero" href="https://discord.gg/dFpFCEq5K" target="_blank">
+        <i class="ti ti-brand-discord"></i> 免費加入 Discord 社群
+      </a>
+      <a class="btn-ig-hero" href="https://www.instagram.com/tsnr.trade/" target="_blank">
+        <i class="ti ti-brand-instagram"></i> 追蹤官方 Instagram
+      </a>
+    </div>
+  </div>
+
+  <div class="team-section" id="team">
+    <div class="team-inner">
+      <div class="team-title">導師與助教團隊</div>
+      <div class="team-grid">
+
+        <div class="team-card official">
+          <div class="t-av av-official">SNR</div>
+          <div>
+            <div class="t-info-name">SNR 官方帳號</div>
+            <div class="t-info-role">最新資訊 · 課程公告 · 社群動態</div>
+            <a class="t-ig-link" href="https://www.instagram.com/tsnr.trade/" target="_blank">
+              <i class="ti ti-brand-instagram"></i> @tsnr.trade
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card lead">
+          <div class="t-av av-lead">AT</div>
+          <div>
+            <div class="t-info-name">Ariff T</div>
+            <div class="t-info-role">首席導師 · 做單分享與策略指導</div>
+            <a class="t-ig-link" href="https://www.instagram.com/ariff__t" target="_blank">
+              <i class="ti ti-brand-instagram"></i> @ariff__t
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card asst">
+          <div class="t-av av-asst">Y</div>
+          <div>
+            <div class="t-info-name">Young</div>
+            <div class="t-info-role">助教 · 全課程中文帶領 · 課程報名聯絡</div>
+            <a class="t-ig-link" href="https://www.instagram.com/zhijie5371/" target="_blank">
+              <i class="ti ti-brand-instagram"></i> @zhijie5371
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card asst">
+          <div class="t-av av-asst">R</div>
+          <div>
+            <div class="t-info-name">Ronting</div>
+            <div class="t-info-role">助教 · 全課程中文帶領</div>
+            <a class="t-ig-link" href="https://www.instagram.com/rongting_oao" target="_blank">
+              <i class="ti ti-brand-instagram"></i> @rongting_oao
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">全中文</div><div class="stat-label">助教帶領所有課程</div></div>
+    <div class="stat-item"><div class="stat-num">免費</div><div class="stat-label">入門完全無需付費</div></div>
+    <div class="stat-item"><div class="stat-num">終身</div><div class="stat-label">進階方案永久社群</div></div>
+    <div class="stat-item"><div class="stat-num">全球</div><div class="stat-label">SNR 交易員社群</div></div>
+  </div>
+
+  <section id="plans">
+    <p class="sec-tag">PLANS</p>
+    <h2 class="sec-h2">選擇適合你的學習方案</h2>
+    <div class="plans">
+
+      <div class="plan-card free" id="free">
+        <span class="plan-badge badge-free">完全免費</span>
+        <div class="plan-name">入門社群</div>
+        <div class="plan-price price-free">免費</div>
+        <div class="plan-tutor"><i class="ti ti-users"></i> 助教 Young & Ronting 全中文帶領</div>
+        <div class="plan-desc">零門檻加入 Discord 社群，由中文助教帶領學習，完整吸收超越市面上 90% 收費課程的交易知識。</div>
+        <ul class="plan-features">
+          <li><i class="ti ti-check ck-g"></i>方向判斷教學（全中文）</li>
+          <li><i class="ti ti-check ck-g"></i>關鍵水平識別（全中文）</li>
+          <li><i class="ti ti-check ck-g"></i>進場方式解析（全中文）</li>
+          <li><i class="ti ti-check ck-g"></i>導師 Ariff T 做單分享</li>
+          <li><i class="ti ti-check ck-g"></i>中文學員交流社群</li>
+        </ul>
+        <a class="plan-btn btn-free-plan" href="https://discord.gg/dFpFCEq5K" target="_blank">
+          <i class="ti ti-brand-discord"></i> 立即加入 Discord
+        </a>
+      </div>
+
+      <div class="plan-card group">
+        <span class="plan-badge badge-pop">最受歡迎</span>
+        <div class="plan-name">小組教學</div>
+        <div class="plan-price price-group">$1,000 <span style="font-size:14px;color:#475569;">USD</span></div>
+        <div class="plan-tutor"><i class="ti ti-users"></i> 助教 Young & Ronting 全中文帶領</div>
+        <div class="plan-desc">四堂系統化中文課程，從零建立完整交易系統，訓練至穩定盈利水平。報名請聯絡助教 Young。</div>
+        <ul class="plan-features">
+          <li><i class="ti ti-check ck-p"></i>四堂深度中文課程</li>
+          <li><i class="ti ti-check ck-p"></i>系統化交易邏輯建構</li>
+          <li><i class="ti ti-check ck-p"></i>訓練至穩定盈利水平</li>
+          <li><i class="ti ti-check ck-p"></i>加入終身私人中文社群</li>
+          <li><i class="ti ti-check ck-p"></i>與全球 SNR 交易員交流</li>
+        </ul>
+        <a class="plan-btn btn-group" href="https://www.instagram.com/zhijie5371/" target="_blank">
+          <i class="ti ti-brand-instagram"></i> 聯絡助教 Young 報名
+        </a>
+      </div>
+
+      <div class="plan-card vip">
+        <span class="plan-badge badge-vip">頂級方案</span>
+        <div class="plan-name">一對一教學</div>
+        <div class="plan-price price-vip">$3,000 <span style="font-size:14px;color:#475569;">USD</span></div>
+        <div class="plan-tutor"><i class="ti ti-user"></i> 助教 Young & Ronting 全中文一對一</div>
+        <div class="plan-desc">完全彈性時間，助教以全中文一對一深度教學，帶你完整掌握 SNR 交易邏輯。報名請聯絡助教 Young。</div>
+        <ul class="plan-features">
+          <li><i class="ti ti-check ck-y"></i>完全彈性時間安排</li>
+          <li><i class="ti ti-check ck-y"></i>全中文一對一深度教學</li>
+          <li><i class="ti ti-check ck-y"></i>完整掌握 SNR 交易邏輯</li>
+          <li><i class="ti ti-check ck-y"></i>個人化學習計畫</li>
+          <li><i class="ti ti-check ck-y"></i>加入終身私人社群</li>
+          <li><i class="ti ti-check ck-y"></i>與全球 SNR 菁英交易員互動</li>
+        </ul>
+        <a class="plan-btn btn-vip" href="https://www.instagram.com/zhijie5371/" target="_blank">
+          <i class="ti ti-brand-instagram"></i> 聯絡助教 Young 報名
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="features-wrap">
+    <div class="features-inner">
+      <p class="sec-tag">WHY SNR</p>
+      <h2 class="sec-h2">SNR 社群的獨特優勢</h2>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-num">01</div>
+          <h4>免費即超越 90% 收費課程</h4>
+          <p>由助教以全中文帶領，內容獨一無二，涵蓋方向判斷、關鍵水平、進場邏輯，不花一分錢就贏在起跑線。</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-num">02</div>
+          <h4>同系統中文社群討論</h4>
+          <p>所有成員使用相同 SNR 框架，在 Discord 以中文深度討論，社群氛圍高度聚焦，交流更有效率。</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-num">03</div>
+          <h4>導師真實做單分享</h4>
+          <p>Ariff T 定期在 Instagram 與社群分享真實市場操作，助教即時以中文解說交易邏輯。</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-num">04</div>
+          <h4>全球 SNR 交易員網絡</h4>
+          <p>進階學員加入終身私人社群，與導師及來自世界各地的 SNR 交易員建立長期連結。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="cta-tag">🇲🇾 馬來西亞 SNR · 助教全中文帶領</div>
+    <h2>今天就開始你的交易之路</h2>
+    <p>加入 Discord 免費社群，或追蹤官方 Instagram 了解最新資訊。</p>
+    <div class="cta-btns">
+      <a class="btn-discord-hero" href="https://discord.gg/dFpFCEq5K" target="_blank">
+        <i class="ti ti-brand-discord"></i> 免費加入 Discord
+      </a>
+      <a class="btn-ig-hero" href="https://www.instagram.com/tsnr.trade/" target="_blank">
+        <i class="ti ti-brand-instagram"></i> 追蹤 @tsnr.trade
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 SNR 中文社群 · 馬來西亞 · 導師：Ariff T · 助教：Young · Ronting</span>
+      <div class="footer-social">
+        <a class="footer-link footer-discord" href="https://discord.gg/dFpFCEq5K" target="_blank">
+          <i class="ti ti-brand-discord"></i> Discord
+        </a>
+        <a class="footer-link footer-ig" href="https://www.instagram.com/tsnr.trade/" target="_blank">
+          <i class="ti ti-brand-instagram"></i> @tsnr.trade
+        </a>
+        <a class="footer-link footer-ig" href="https://www.instagram.com/ariff__t" target="_blank">
+          <i class="ti ti-brand-instagram"></i> @ariff__t
+        </a>
+        <a class="footer-link footer-ig" href="https://www.instagram.com/zhijie5371/" target="_blank">
+          <i class="ti ti-brand-instagram"></i> @zhijie5371
+        </a>
+        <a class="footer-link footer-ig" href="https://www.instagram.com/rongting_oao" target="_blank">
+          <i class="ti ti-brand-instagram"></i> @rongting_oao
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
